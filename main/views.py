@@ -7,3 +7,6 @@ def contact(request):
 
 def index(request):
     return render(request, 'main/index.html')
+
+def prices(request):
+    return render(request,'main/prices.html')
