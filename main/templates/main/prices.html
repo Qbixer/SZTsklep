@@ -2,8 +2,15 @@
 <head>
 </head>
 <body>
-    <div>
-        Prices template!!!
-    </div>
+<div>
+Prices!!!
+</div>
+{% if prices %}
+    <ul>
+        {% for price in prices %}
+            <li>{{price.product_name}} : {{price.prices}}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
 </body>
 </html>
