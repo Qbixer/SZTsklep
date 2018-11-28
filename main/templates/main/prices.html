@@ -6,11 +6,20 @@
 Prices!!!
 </div>
 {% if prices %}
-    <ul>
-        {% for price in prices %}
-            <li>{{price.product_name}} : {{price.prices}}</li>
-        {% endfor %}
-    </ul>
+<table>
+  <tr>
+    <th>Product</th>
+    <th>Price</th> 
+    <th>Discount</th>
+  </tr>
+{% for price in prices %}
+  <tr>
+    <td>{{price.product_name}}</td>
+    <td>{{price.prices}}</td> 
+    <td>{{price.discount}}</td>
+  </tr>
+   {% endfor %}
+</table>
 {% endif %}
 </body>
 </html>
